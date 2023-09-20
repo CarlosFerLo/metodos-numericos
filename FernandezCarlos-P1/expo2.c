@@ -4,19 +4,27 @@
 
 #define PREC 1e-15
 
-/*
-    Para fitar los errores teoricos calculamos el siguiente termino y lo multiplicamos por e(x) si x > 1
-*/
-
 int main (void) {
-	int i ;
+	int i, is_neg ;
 	double pred, term, x, errorAbs, errorTeorico ;
 
 	for (x = -25; x <= 25; x++) {
+        if (x < 0) {
+            x = fabs(x) ;
+            is_neg = -1 ;
+        } else {
+            is_neg = 1 ;
+        }
+        
 		for (i = 1, term = 1, pred = 1; fabs(term) > PREC; i++) {
 			term *= x / i ;
 			pred += term ;
 		}
+        
+        if (is_neg == -1) {
+                pred = 1/pred ;
+                x *= -1 ;
+        }
 
 		errorAbs = fabs(exp(x) - pred) ;
         errorTeorico = x > 0 ? fabs(exp(x) * term) : fabs(term) ;
