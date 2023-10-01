@@ -33,11 +33,3 @@ int main (void) {
 
     return 0 ;
 }
-
-/*
-    Estimacion del error en k = 34: 4.69210e-27
-
-    Interpretacion:
-        El error en este caso es mucho menor a los dos casos anteriores. 
-
-*/

@@ -4,10 +4,6 @@
 
 #define PREC 1e-15
 
-/*
-    Para fitar los errores teoricos calculamos el siguiente termino y lo multiplicamos por e(x) si x > 1
-*/
-
 int main (void) {
 	int i ;
 	double pred, term, x, errorAbs, errorTeorico ;

@@ -33,11 +33,3 @@ int main (void) {
 
 	return 0;
 }
-
-/*
-    Para calcular exp(x) unicamente si x > 0, lo que se ha hecho es utilizar el mismo algoritmo que antes para calcular exp(|x|) y en funcion de si
-    x < 0 o no se invertia (1 / exp(|x|) si x < 0).
-
-    El resultado es un menor error real para x < 0 que en el caso anterior.
-
-*/

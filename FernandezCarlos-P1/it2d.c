@@ -32,8 +32,3 @@ int main (void) {
 
     return 0 ;
 }
-
-/*
-     Estimacion del error k = 34: 5.51372e-15
-
-*/
