@@ -1,3 +1,5 @@
+/* Carlos Fernández Lorán */
+
 #include <stdio.h>
 #include <math.h>
 

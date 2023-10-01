@@ -1,3 +1,4 @@
+/* Carlos Fernández Lorán */
 #include <stdio.h>
 #include <math.h>
 
@@ -63,4 +64,7 @@ int main (void) {
     Este metodo es muy rapido para valores de x en [-20, 20] con una precison de hasta 1e-14 para obtener un resultado casi instantaneo.
     Para precisiones mayores con valores |x| > 10 tarda unos minutos y tiende a fallar. Por eso creo que el metodo del apartado (b) tiene unos
     resultados mejores que este, consiguiendo una mayor precision y velocidad para |x| mas grandes.
+
+    Este metodo funciona peor para valores altos de |x| on un error relativo menor a 1e-15 por que la serie de taylor de exp(1) tarda mucho en
+    converger y los terminos son muy pequeños lo que hace que el ordenador asigne nan a la variable e y haga fallar al algoritmo.
 */
