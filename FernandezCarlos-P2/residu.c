@@ -1,3 +1,4 @@
+/* Carlos Ferández Lorán */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -90,20 +91,6 @@ int main (void) {
 	/* Cerrar segundo archivo de lectura */
 	fclose(f) ;
 
-	/* DEBUG: Mostrar matriz A */
-	for (i = 0; i < n; i++) {
-		for (j = 0; j < n; j++) printf(" %lf", A[i][j]) ; 
-		printf("\n") ;
-	}
-
-	/* DEBUG: Mostrar vector b */
-	for (i = 0; i < n; i++) printf(" %lf", b[i]) ;
-	printf("\n") ;
-
-	/* DEBUG: Mostar vector x */
-	for (i = 0; i < n; i++) printf(" %lf", x[i]) ;
-	printf("\n") ;
-
 	/* Calcular suma termino a termino */
 	sum = 0.0 ;
 	for (i = 0; i < n; i++) {
@@ -116,7 +103,7 @@ int main (void) {
 	}
 
 	/* Devolver resultado */
- 	printf("Resultado: %lf\n", sqrt(sum));
+ 	printf("Resultado: %le\n", sqrt(sum));
 
 	/* Liberar memoria */
 	for (i = 0; i < n; i++) free(A[i]) ;
