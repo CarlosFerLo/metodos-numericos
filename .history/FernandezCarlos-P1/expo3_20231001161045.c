@@ -39,7 +39,7 @@ int main (void) {
 
     pred *= (is_neg == -1) ? 1/e : e ;
     
-    /* Alterar el valor de x si la x original era negativa */
+    /* Alterar el valor de pred si x es negativa */
     if (is_neg == -1) {
         x *= -1 ;
     }
