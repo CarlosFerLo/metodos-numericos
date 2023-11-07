@@ -3,7 +3,7 @@
 
 double gauss(double** a, double* x, double* b, int n, double tol) {
 	int i, j, k ;
-	double aux, det ;
+	double aux, det, *auxp ;
 
 	det =  1.0 ;
 
@@ -18,11 +18,10 @@ double gauss(double** a, double* x, double* b, int n, double tol) {
 		}
 
 		if (k < j) {
-			for (i = k; i < n; i++) {
-				aux = a[k][i] ;
-				a[k][i] = a[j][i] ;
-				a[j][i] = aux ;
-			}
+			auxp = a[k] ;
+			a[k] = a[j] ;
+			a[j] = auxp ;
+
 			aux = b[k] ;
 			b[k] = b[j] ;
 			b[j] = aux ;
