@@ -7,3 +7,7 @@ The .zip files are the ones that have been submitted and tags are pointing to th
 New solutions can be seen in the excercise folder and will be listed on tge ypdates section of this file.
 
 ## Updates
+
+### FernandezCarlos-P2
+- gauss.c :
+    * Change matrix rows by pointer when pivoting.
