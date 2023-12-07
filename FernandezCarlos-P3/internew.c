@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "didi.h"
 #include "hornernewton.h"
@@ -7,14 +8,14 @@
 #define FILE_NAME_MAX_LEN 20
 
 int main (void) {
-	int n, m ;
-	double x*, f* ;
+	int n, m, i ;
+	double *x, *f ;
 	char name[FILE_NAME_MAX_LEN] ;
 	FILE *file ;	
 
 	/* Leer el grado del polinomio (n) */
 	printf("Introduzca el grado del polinomio: ") ;
-	scanf(" %d", &n) ;
+	scanf(" %d", &n) ;	
 
 	if (n < 0) {
 		printf("Valor de n no es valido.\n") ;
@@ -36,7 +37,6 @@ int main (void) {
 
 	/* Utilizst la function punts para inicializar las variables x y f */
 	punts(x, f, n) ;
-
 
 	/* Calculara los coeficientes del polinomio utilizando la funcion didi */
 	didi(x, f, n) ;
@@ -64,7 +64,7 @@ int main (void) {
 
 	/* Evaluar p en los diferentes puntos y escribir en el archivo */
 	for (i = 0; i <= m; i++) {
-		fprintf(file, "%lf %lf\n", x[0] + i * (x[n] - x[0]) / m, hornernewton(f, x, x[0] + i * (x[n] - x[0]) / m, n) ; 
+		fprintf(file, "%lf %lf\n", x[0] + i * (x[n] - x[0]) / m, hornernewton(f, x, x[0] + i * (x[n] - x[0]) / m, n)) ; 
 	}
 
 	/* Cerrar archivo de escritura */

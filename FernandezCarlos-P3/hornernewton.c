@@ -1,11 +1,11 @@
-double hornernewton (double *dd, double *x, double z, double n) {
+double hornernewton (double *dd, double *x, double z, int n) {
 	int i ;
 	double p ;
 
-	p = dd[0] ;
+	p = dd[n] ;
 
-	for (i = 1; i <= n; i++) {
-		p = p * x[i] + dd[i] ;
+	for (i = n - 1; i  >= 0; i--) {
+		p = p *(z - x[i]) + dd[i] ;
 	}
 	
 	return p ;
