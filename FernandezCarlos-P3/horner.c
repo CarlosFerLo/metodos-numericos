@@ -7,7 +7,7 @@ double horner (double *a, double z, int n) {
 
 	/* Iteratively calculate the output */
 	for (i = n - 1; i >= 0; i--) {
-		p = p*x + a[i] ;
+		p = p*z + a[i] ;
 	} 
 
 	return p ;
