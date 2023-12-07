@@ -1,3 +1,5 @@
 *.o
 *.exe
 .history
+*.dad
+*.res
