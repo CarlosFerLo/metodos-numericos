@@ -1,0 +1,12 @@
+Los archivos plot1-8 contienen las graficas de los polinomios interpoladores de grado 1 a 5 utilizando las 8 funciones de generacion de puntos (se exluye puntsfit.c).
+
+Se puede ver en el caso de la exponencial (plot1.png y plot5.png) el ajuste mejora mucho al augmentar el grado del polinomio. EN este caso se puede ver como el polinomio de grado 5 ajusta de forma fiel la grafica en este intervalo. También se puede apreciar como si se utilizan las abcisas de Txebixev se obtiene un mejor ajuste no solo para el caso n = 5 sino q tambien para el resto si se compara con las abcisas equidistantes.
+
+En el segundo caso, la funcion arctangente, (plot2.png y plot6.png) se observa un comportamiento similar, aunque el ajuste es menos fiel a la funcion original. La mejoria del ajuste de las abcisas de Txebixev sigue siendo palpable.
+
+En el tercer caso, la funcion valor absoluto de x, (plot3.png y plot7.png) se observa a diferencia del resto como los polinomios de grado par (2 y 4) ajustan peor de lo esperado dado que al pasar por el punto (0, 0) estos ajustan peor a la funcion que los polinomios impares (3 y 5). Tambien hay que mencionar que los polinomios de grado impar no se ajustan bien a la funcion al acercarse al 0 pero lejos de el si que consiguen un buen ajuste. Las abcisas de Txebixev siguen obteniendo mejores resultados.
+
+Por último, la funcion 1/(1 + 25 * x^2), (plot4.png y plot8.png) es ajustada de manera pobre por polinomios de grado par, esta diferencia es mucho mayor que en el valor absoluto. Por parte de los polinomios de grado impar, estos ajustan bien excepto al acercarse a la abcisa 0. En este caso la diferencia entre una u otra eleccion de abcisas no es significativa.
+
+
+Carlos Fernández Lorán
