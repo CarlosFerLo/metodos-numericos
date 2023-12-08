@@ -13,8 +13,8 @@ void punts (double *x, double *f, int n) {
 
 	/* Calcular xi y fi */
 	for (i = 0; i <= n; i++) {
-		x[n-i] = a + ((b - a) / 2) * (1 + cos(PI*(2*i + 1)/(2*n + 2))) ;
-		f[n-i] = exp(x[i]) ;
+		x[i] = a + ((b - a) / 2) * (1 + cos(PI*(2*(n - i) + 1)/(2*n + 2))) ;
+		f[i] = exp(x[i]) ;
 	}
 	
 

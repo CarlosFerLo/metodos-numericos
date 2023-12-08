@@ -14,7 +14,7 @@ void punts (double *x, double *f, int n) {
 	/* Calcular xi y fi */
 	for (i = 0; i <= n; i++) {
 		x[n-i] = a + ((b - a) / 2) * (1 + cos(PI*(2*i + 1)/(2*n + 2))) ;
-		f[n-i] = atan(x[i]) ;
+		f[n-i] = atan(x[n-i]) ;
 	}
 	
 
