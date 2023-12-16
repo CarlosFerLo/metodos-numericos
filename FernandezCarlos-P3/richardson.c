@@ -71,6 +71,7 @@ int main (void) {
 		/* Comprobar si cumple condicion de parada */
 		if (fabs(r1[0] - r2[0]) < prec) {
 			printf("El valor de la derivada en x = %le es %le\n", x, r2[0]) ;
+			printf("El error teorico es: %le\n", fabs(df(x) - r2[0])) ;
 			goto liberar ;
 		}
 
@@ -82,13 +83,14 @@ int main (void) {
 			/* Comprobar si se cumple la condicion de parada */
 			if (fabs(r1[j] - r2[j]) < prec) {
 				printf("El valor de la derivada en x = %le es %le\n", x, r2[j]) ;
+				printf("El error teorico es: %le\n", fabs(df(x) - r2[j])) ;
 				goto liberar ;
 			}
 		}
 
 		/* Calcular Fi */
 		r2[i] = r2[i-1] + increment(2*(i-1), q, r1[i-1], r2[i-1]) ;
-		
+
 		/* Intercanviar vectorees r1 y r2 */
 		auxp = r1 ;
 		r1 = r2 ;
