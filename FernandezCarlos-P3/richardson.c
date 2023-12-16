@@ -72,7 +72,7 @@ int main (void) {
 		/* Comprobar si cumple condicion de parada */
 		if (fabs(r1[0] - r2[0]) < prec) {
 			printf("El valor de la derivada en x = %le es %le\n", x, r2[0]) ;
-			printf("El error real es: %le\n", fabs(df(x) - r2[0])) ;
+			printf("El error real es: %le\n", (ordre == 1) ? fabs(df(x) - r2[0]) : fabs(ddf(x) - r2[0])) ;
 			goto liberar ;
 		}
 
@@ -84,7 +84,7 @@ int main (void) {
 			/* Comprobar si se cumple la condicion de parada */
 			if (fabs(r1[j] - r2[j]) < prec) {
 				printf("El valor de la derivada en x = %le es %le\n", x, r2[j]) ;
-				printf("El error real es: %le\n", fabs(df(x) - r2[j])) ;
+				printf("El error real es: %le\n", (ordre == 1) ? fabs(df(x) - r2[j]) : fabs(ddf(x) - r2[j])) ;
 				goto liberar ;
 			}
 		}

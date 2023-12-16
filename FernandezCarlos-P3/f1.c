@@ -8,3 +8,7 @@ double f (double x) {
 double df (double x) {
     return exp(x) ;
 }
+
+double ddf (double x) {
+    return exp(x) ;
+}

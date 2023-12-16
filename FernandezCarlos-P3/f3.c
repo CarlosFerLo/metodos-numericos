@@ -18,3 +18,8 @@ double df (double x) {
 
     return signo * 3 * x*x ;
 }
+
+double ddf (double x) {
+    if (x > 0) return 6 * x ;
+    else return - 6 * x ;
+}
