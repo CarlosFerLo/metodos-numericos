@@ -77,7 +77,7 @@ int main (void) {
 		/* Calcular Fj+1 para 1 < j < i-1 */
 		for (j = 1; j < i-1; j++) {
 			/* Calcular Fj+1 */
-			r2[j] = r2[j-1] + increment(i, q, r1[j-1], r2[j-1]) ; // TODO: Encontrar valor de p
+			r2[j] = r2[j-1] + increment(2*(j-1), q, r1[j-1], r2[j-1]) ;
 		
 			/* Comprobar si se cumple la condicion de parada */
 			if (fabs(r1[j] - r2[j]) < prec) {
@@ -87,7 +87,7 @@ int main (void) {
 		}
 
 		/* Calcular Fi */
-		r2[i-1] = r2[i-2] + increment(i, q, r1[i-2], r2[i-2]) ; // TODO: Encontrar valor de p 
+		r2[i-1] = r2[i-2] + increment(2*(i-2), q, r1[i-2], r2[i-2]) ;
 
 		/* Intercanviar vectorees r1 y r2 */
 		auxp = r1 ;
@@ -95,7 +95,14 @@ int main (void) {
 		r2 = auxp ;
 	}
 
+	/* Devolver resultado obtenido en caso de no obtener la precision deseada*/
+	printf("AVISO: No se ha obtenido la precision deseada.\n") ;
+	printf("El valor de la derivada en x = %le es %le\n", x, r1[k-1]) ;
+
+	/* Liberar memoria */
 	liberar :
+		free(r1) ;
+		free(r2) ;
 
 	return 0 ;
 }
