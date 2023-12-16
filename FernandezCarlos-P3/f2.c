@@ -1,3 +1,4 @@
+/* Carlos Fernández Lorán */
 #include <math.h>
 
 double f (double x) {
