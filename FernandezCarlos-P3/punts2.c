@@ -8,7 +8,7 @@ void punts (double *x, double *f, int n) {
 
 	/* Leer intervalo de estudio */
 	printf("Introduzca el intervalo a estudiar: ") ;
-	scanf(" %lf %lf", &a, &b) ;
+	scanf(" %le %le", &a, &b) ;
 
 	/* Calcular xi y fi */
 	for (i = 0; i <= n; i++) {

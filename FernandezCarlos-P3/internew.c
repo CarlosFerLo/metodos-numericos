@@ -43,7 +43,7 @@ int main (void) {
 	didi(x, f, n) ;
 
 	/* Leer valor de m */
-	printf("Introduzca el numero de intervalos en [%lf, %lf]: ", x[0], x[n]) ;
+	printf("Introduzca el numero de intervalos en [%le, %le]: ", x[0], x[n]) ;
 	scanf(" %d", &m) ;
 
 	if (m <= 0) {
@@ -65,7 +65,7 @@ int main (void) {
 
 	/* Evaluar p en los diferentes puntos y escribir en el archivo */
 	for (i = 0; i <= m; i++) {
-		fprintf(file, "%lf %lf\n", x[0] + i * (x[n] - x[0]) / m, hornernewton(f, x, x[0] + i * (x[n] - x[0]) / m, n)) ; 
+		fprintf(file, "%le %le\n", x[0] + i * (x[n] - x[0]) / m, hornernewton(f, x, x[0] + i * (x[n] - x[0]) / m, n)) ; 
 	}
 
 	/* Cerrar archivo de escritura */

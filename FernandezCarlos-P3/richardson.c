@@ -13,7 +13,7 @@ int main (void) {
 
 	/* Lectura de los datos */
 	printf("Introduce la precision deseada para la derivada: ") ;
-	scanf(" %lf", &prec) ;
+	scanf(" %le", &prec) ;
 
 	if (prec <= 0) {
 		printf("Valor de la precision no puede ser negativo o 0.\n") ;
@@ -21,7 +21,7 @@ int main (void) {
 	}
 
 	printf("Indtroduce el factor de disminucion del paso: ") ;
-	scanf(" %lf", &q) ;
+	scanf(" %le", &q) ;
 
 	printf("Introduce el numero maximo de etapas de extrapolación: ") ;
 	scanf(" %d", &k) ;
@@ -40,10 +40,10 @@ int main (void) {
 	}
 
 	printf("Introduce el punto donde se quiere calcular la derivada: ") ;
-	scanf(" %lf", &x) ;
+	scanf(" %le", &x) ;
 
 	printf("Introduce el paso inicial: ") ;
-	scanf(" %lf", &h) ;
+	scanf(" %le", &h) ;
 
 	/* Asignar memoria para los vectores r1 y r2 */
 	r1 = (double *) malloc(k * sizeof(double)) ;

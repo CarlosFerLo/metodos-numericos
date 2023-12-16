@@ -19,7 +19,7 @@ void punts (double *x, double *f, int n) {
 	}
 	
 	for (i = 0; i <= n; i++) {
-		fscanf(file, " %lf %lf", x + i, f + i) ;
+		fscanf(file, " %le %le", x + i, f + i) ;
 	}
 
 	fclose(file) ;
