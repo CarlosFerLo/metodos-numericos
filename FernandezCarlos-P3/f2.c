@@ -1,9 +1,9 @@
 #include <math.h>
 
 double f (double x) {
-    return exp(x) ;
+    return sin(x) ;
 }
 
 double df (double x) {
-    return exp(x) ;
+    return cos(x) ;
 }
