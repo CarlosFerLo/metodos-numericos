@@ -59,7 +59,6 @@ int main (void) {
 
 	/* Calcular F1(h) */
 	r1[0] = derivar(x, h, ordre, f) ;
-	/* DEBUG */ printf(" %le\n", r1[0]) ;
 
 	/* Iterar hasta satisfacer condicion de parada */
 	for (i = 1; i < k; i++) {
@@ -68,7 +67,6 @@ int main (void) {
 
 		/* Calcular F1 */
 		r2[0] = derivar(x, h, ordre, f) ;
-		/* DEBUG */ printf(" %le", r2[0]) ;		
 
 		/* Comprobar si cumple condicion de parada */
 		if (fabs(r1[0] - r2[0]) < prec) {
@@ -77,10 +75,9 @@ int main (void) {
 		}
 
 		/* Calcular Fj+1 para 1 < j < i-1 */
-		for (j = 1; j < i-1; j++) {
+		for (j = 1; j < i; j++) {
 			/* Calcular Fj+1 */
 			r2[j] = r2[j-1] + increment(2*(j-1), q, r1[j-1], r2[j-1]) ;
-			/* DEBUG */ printf(" %le", r2[j]) ;
 
 			/* Comprobar si se cumple la condicion de parada */
 			if (fabs(r1[j] - r2[j]) < prec) {
@@ -90,9 +87,8 @@ int main (void) {
 		}
 
 		/* Calcular Fi */
-		r2[i-1] = r2[i-2] + increment(2*(i-2), q, r1[i-2], r2[i-2]) ;
-		/* DEBUG */ printf(" %le\n", r2[i-1]) ;
-
+		r2[i] = r2[i-1] + increment(2*(i-1), q, r1[i-1], r2[i-1]) ;
+		
 		/* Intercanviar vectorees r1 y r2 */
 		auxp = r1 ;
 		r1 = r2 ;
@@ -100,8 +96,7 @@ int main (void) {
 	}
 
 	/* Devolver resultado obtenido en caso de no obtener la precision deseada*/
-	printf("AVISO: No se ha obtenido la precision deseada.\n") ;
-	printf("El valor de la derivada en x = %le es %le\n", x, r1[k-1]) ;
+	printf("ERROR: No se ha obtenido la precision deseada.\n") ; ;
 
 	/* Liberar memoria */
 	liberar :
