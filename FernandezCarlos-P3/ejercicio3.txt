@@ -1,0 +1,5 @@
+El programa consigue obtener buenos resultados al calcular la primera y segunda derivada de las funciones propuestas.
+El tiempo de convergencia es corto.
+En el caso de la function de f3.c se obtienen valored de la derivada en el 0 aun que la funcion no sea derivable en el 0.
+Pasa lo mismo para la funcion de f4.c, aún que en este segundo caso el valor difiere de la extension continua de la derivada en el 0 (dado que no tiene).
+Se ha optado por utilizar valores de q no muy grandes por que esto generava una perdida de precision considerable e incluso dificultaba la convergencia.
