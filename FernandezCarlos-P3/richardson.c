@@ -52,7 +52,7 @@ int main (void) {
 	}
 
 	r2 = (double *) malloc(k * sizeof(double)) ;
-	if (r2 = NULL) {
+	if (r2 == NULL) {
 		printf("ERROR al asignar memoria para r2.\n") ;
 		return 1 ;
 	}
