@@ -1,8 +1,12 @@
+/* DEBUG */
+#include <stdio.h>
+
 double increment (int p, double q, double y, double z) {
 	int i ;
 	double qp ;
 	
-	for (i = 0, qp = 1; i < p; i++) qp *= q ;
+	for (i = 1, qp = q; i < p; i++) qp *= q ;
 
-	 return (z - y) / (qp - 1) ;
+	/* DEBUG */ printf(" (%le) ", (z - y) / (qp - 1)) ;
+	return (z - y) / (qp - 1) ;
 }
