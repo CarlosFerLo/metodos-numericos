@@ -1,0 +1,1 @@
+double normal (double x) ;
