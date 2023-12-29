@@ -8,7 +8,7 @@
 
 double normal (double x) {
 	int j, m, signo ;
-	double R, T ;
+	double R ;
 
 	/* Tomar x como positica y guardar su signo en la variable signo */
 	if (x < 0) {
@@ -29,15 +29,15 @@ double normal (double x) {
 	}
 
 	/* Calcular la integral mediante el metodo de trapecios con ese valor d m */
-	T = 0.5 + 0.5 * exp(-(x*x)/2) ;
+	R = 0.5 + 0.5 * exp(-(x*x)/2) ;
 
-	for (j = 1; j < m; j++) T += exp(-(j*x/m) * (j*x/m) / 2) ;
+	for (j = 1; j < m; j++) R += exp(-(j*x/m) * (j*x/m) / 2) ;
 
-	T *= x/m ;
+	R *= x/m ;
 
 	/* Calcular el valor de f(x) apartir de T */
-	T /= sqrt(2 * M_PI) ;
-	T += F0 ;
+	R /= sqrt(2 * M_PI) ;
+	R += F0 ;
 
-	return (signo == POS) ? T : 1 - T ;
+	return (signo == POS) ? R : 1 - R ;
 }
