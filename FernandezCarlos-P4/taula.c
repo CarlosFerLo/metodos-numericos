@@ -1,3 +1,4 @@
+/* Carlos Fern√°ndez Lo√n */
 #include <stdio.h>
 
 #include "normal.h"

@@ -1,3 +1,4 @@
+/* Carlos Fernández orán */
 #include <math.h>
 
 #define TOL 1e-8

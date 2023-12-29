@@ -1,3 +1,4 @@
+/* Carlos Fernándz Lorán */
 #include <stdio.h>
 #include <math.h>
 
